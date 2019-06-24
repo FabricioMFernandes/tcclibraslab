@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body{
+	background-color: 000000;
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+}
+h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 30pt;
+	color: darkblue;
+
+}
+
+p{
+	font-family: 'Quicksand', sans-serif;
+    color: #BBBBBB;
+    font-size: 10pt;
+    transition: color 0.3s;
+}
+
+header#cabecalho{
+	text-align: left;
+	background: url("logo-ex-7.png") no-repeat;
+}
+
+nav#log ul{
+list-style: none;
+position: absolute;
+left: 570px;
+}
+
+nav#log{
+	display: block;
+}
+
+nav#log li{
+	background-color:#1a1aff;
+	transition: background-color 0.5s;
+	padding: 8px;
+}
+nav#log li:hover {
+	background-color:white; 
+}
+nav#log a{
+	text-decoration-line: none;
+	color:#ffffff;
+	transition: color 0.5s;
+}
+
+nav#log a:hover{
+	color:#1a1aff;
+}
+
+nav#log p:hover{
+	color: #777777; 
+}
+
+form{
+	left: 100px;
+	
+}
