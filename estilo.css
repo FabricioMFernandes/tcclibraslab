@@ -19,7 +19,7 @@ p{
     transition: color 0.3s;
 }
 
-header#cabecalho{
+header/*#cabecalho*/{
 	text-align: left;
 	background: url("logo-ex-7.png") no-repeat;
 }
@@ -30,14 +30,35 @@ position: absolute;
 left: 570px;
 }
 
+ul{
+list-style: none;
+}
+
 nav#log{
 	display: block;
 }
 
-nav#log li{
+.botaoBonito{
+background-color:#1a1aff;
+	transition: background-color 0.5s;
+	padding: 8px;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.botaoBonito:hover{
+	background-color:white; 
+	color:#1a1aff;
+}
+
+/*nav#log li{
 	background-color:#1a1aff;
 	transition: background-color 0.5s;
 	padding: 8px;
+	margin: 13px 17px 13px 17px;
 }
 nav#log li:hover {
 	background-color:white; 
@@ -54,9 +75,20 @@ nav#log a:hover{
 
 nav#log p:hover{
 	color: #777777; 
+}*/
+
+a#esqueci{
+	text-decoration-line: none;
+	color: #BBBBBB;
+    font-size: 10pt;
+    transition: color 0.3s;	
 }
 
-form{
-	left: 100px;
-	
+a#esqueci:hover{
+	color: #777777;
+}
+
+nav#cad a{
+	padding: 8px;
+	background-color:#1aff1a;
 }
