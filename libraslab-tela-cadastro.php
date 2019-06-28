@@ -11,5 +11,8 @@
 	 </form>
 </nav>
 <?php
+if (isset($_REQUEST['msg'])){
+	echo $_REQUEST['msg'];
+	}
 	include("footer.html");
 ?>

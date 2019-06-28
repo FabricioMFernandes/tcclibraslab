@@ -4,20 +4,18 @@
 <div class="flow-text"> 
 <?php 
 // prox 3 linhas p o email
-use PHPMailer\PHPMailer\PHPMailer;
+/*use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require 'vendor/autoload.php';
-
+*/
 $con = mysqli_connect("127.0.0.1", "root", "", "libraslab") or die
  ("Sem conexão com o servidor"); 
-// A variavel $result pega as varias $email e $password, faz uma 
-//pesquisa na tabela de usuarios
+
 $email = $_POST['tEmail'];
 $nome = $_POST['tNome'];
 $emailValidation = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(\.[a-z]{3})$/";
 $senha = $_POST['tSenha'];
-$sql = "SELECT * FROM usuario 
-WHERE email = '$email'";
+$sql = "SELECT * FROM usuario WHERE email = '$email'";
 $result = mysqli_query($con,$sql);
 /* Logo abaixo temos um bloco com if e else, verificando se a variável $result foi 
 bem sucedida, ou seja se ela estiver encontrado algum registro idêntico o seu valor
@@ -38,7 +36,7 @@ $hash = password_hash($senha, PASSWORD_DEFAULT);
 $sql = "INSERT INTO usuario (email, nome, senha) VALUES ('$email', '$nome','$hash')";
 $result = mysqli_query($con,$sql);
 
-// info do email
+/* info do email
 $email = "infolibraslab@gmail.com";
 $senha = $_POST['senha'];
 $to_id = $_POST['email'];
@@ -63,7 +61,7 @@ $mail->SMTPOptions = array(
 );
 
 // Email Sending Details
- $mail->setFrom('infolibraslab@gmail.com', 'LibrasLab');
+$mail->setFrom('infolibraslab@gmail.com', 'LibrasLab');
 $mail->addAddress($to_id);
 $mail->Subject = $subject;
 $mail->msgHTML($message);
@@ -76,12 +74,12 @@ echo '<p id="para">'.$error.'</p>';
 else {
 echo '<p id="para"> Cheque sua caixa de entrada ou de spam <br> para ver o email recebido!</p>';
 
-//header('location:index.php?msg=Usuário criado, faça seu login!');
 }
+*/
+header('location:libraslab-tela-login.php?msg=Cadastro concluído, faça seu login!');
   }
+
 ?>
-<div style="text-align: center;"> <a class='btn' href="libraslab-tela-login.php?msg=Cadastro concluído, faça seu login!">Voltar</a> </div>
-</div>
 <?php
 	include("footer.html");
 ?>
