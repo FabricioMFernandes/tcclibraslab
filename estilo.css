@@ -74,7 +74,7 @@ background-color:#00b300;
 
 
 a#exercitar{
-background-color: #ffff00;
+background-color: #ecf02b;
 	transition: background-color 0.5s;
 	padding: 8px;
 	color: white;
@@ -96,7 +96,7 @@ background-color:white;
 
 a#exercitar:hover{
 background-color:white; 
-	color: #ffff00;
+	color: #ecf02b;
 	
 }
 
